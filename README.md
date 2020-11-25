@@ -25,7 +25,9 @@ Provided you are in the master branch else run:`git push heroku branch-name:mast
 - Twitter: [@tendongze95](https://twitter.com/tendongze95)
 - Linkedin: [linkedin](https://www.linkedin.com/in/tendongzegodson)
 
+## Live Link
 
+[Live Demo](https://hidden-headland-79447.herokuapp.com/)
 
 ## Available Scripts
 
