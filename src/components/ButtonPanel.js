@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Button from './Button';
 
@@ -31,7 +32,6 @@ export default function ButtonPannel() {
       <div className="rowFive">
         <Button name="0" />
         <Button name="." />
-        <Button name="," />
         <Button name="=" />
       </div>
     </div>
