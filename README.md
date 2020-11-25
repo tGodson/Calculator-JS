@@ -1,6 +1,33 @@
-# Getting Started with Create React App
+# Calculator Js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Every project has its beginning in setting up some basic structure and tooling. You will build a calculator for Math-magicians Inc using create-react-app, a tool built by developers at Facebook to help you build React applications, saving you from time-consuming setup and configuration.
+
+## Clone the repository
+`git clone https://github.com/tGodson/Calculator-JS.git`
+
+## Deployment
+
+### Install Github Pages
+
+follow to install the Heroku cli: https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
+### Install App on Heroku
+
+In Project directory:\
+Run: `heroku create`\
+Verify with: `git remote -v`,\
+You can then doploy app to heroku with: `git push heroku master`\
+Provided you are in the master branch else run:`git push heroku branch-name:master`\
+
+👤 **Tendongze Godson**
+
+- Github: [tGodson](https://github.com/tGodson)
+- Twitter: [@tendongze95](https://twitter.com/tendongze95)
+- Linkedin: [linkedin](https://www.linkedin.com/in/tendongzegodson)
+
+## Live Link
+
+[Live Demo](https://hidden-headland-79447.herokuapp.com/)
 
 ## Available Scripts
 
