@@ -2,8 +2,52 @@
 
 Every project has its beginning in setting up some basic structure and tooling. You will build a calculator for Math-magicians Inc using create-react-app, a tool built by developers at Facebook to help you build React applications, saving you from time-consuming setup and configuration.
 
-## Clone the repository
-`git clone https://github.com/tGodson/Calculator-JS.git`
+# Project Specification
+
+1. Preparation
+- Create a new logic folder inside src and initialize two javascript files there: calculate.js and operate.js.
+- Add the big.js package to your project dependencies.
+2. Implement the calculate.js module
+- It should contain one default method: calculate.
+- The calculate method should accept a calculator data object and a button name as arguments.
+- The calculator data object should contain three properties: total, next and operation.
+- This method should use the buttonName argument to mutate the calculator’s data object and return its modified version. For instance if buttonName == "+/-", it should multiply total and next by -1 to make it negative or positive.
+3. Implement the operate.js module
+- It should import the big.js module from the corresponding npm package.
+- It should implement one default function named operate.
+- The operate function should accept numberOne, numberTwo and operation as arguments.
+- Using the value of the operation argument, this method should perform a simple math operation. For instance if operation == "-", it should return the result of subtracting the two passed numbers. - - - Remember to wrap the numbers with big.js classes so you can operate on big numbers.
+- If the buttonName in calculate.js is equal to any operation (e.g. +, -, x, ÷, % [modifier - turning the number into a percentage based number]), operate.js should be used to calculate the total property.
+4. Add calculate.js to the App component
+- Import the calculate function.
+
+## Live Link
+
+[Live Demo](https://hidden-headland-79447.herokuapp.com/)
+
+## Built With
+
+- HTML5
+- CSS
+- Javascript ES6
+- React Js
+
+## Getting Started
+
+To get a local copy up and running follow these steps:
+
+### Prerequisites
+
+- npm
+- webpack
+- create-react-app
+
+### Setup
+
+- Clone the repository by running the code `git clone https://github.com/tGodson/Calculator-JS.git`.
+- cd into Calculator-JS folder
+- Run `npm install`.
+- Run `npm start` from your command line to open your app in the browser.
 
 ## Deployment
 
@@ -25,73 +69,10 @@ Provided you are in the master branch else run:`git push heroku branch-name:mast
 - Twitter: [@tendongze95](https://twitter.com/tendongze95)
 - Linkedin: [linkedin](https://www.linkedin.com/in/tendongzegodson)
 
-## Live Link
+## Show your support
 
-[Live Demo](https://hidden-headland-79447.herokuapp.com/)
+Give a ⭐️ if you like this project!
 
-## Available Scripts
+## Acknowledgments
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Microverse](www.microverse.org)
