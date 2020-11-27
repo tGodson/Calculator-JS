@@ -1,15 +1,12 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style.css';
 
-export default function Display(props) {
-  const { result } = props;
-  return (
-    <div>
-      {result}
-    </div>
-  );
-}
+const Display = ({ result }) => (
+  <div className="display">
+    <h6>{result}</h6>
+  </div>
+);
 
 Display.propTypes = {
   result: PropTypes.string,
@@ -18,3 +15,5 @@ Display.propTypes = {
 Display.defaultProps = {
   result: '0',
 };
+
+export default Display;

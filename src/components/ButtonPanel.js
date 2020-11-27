@@ -1,44 +1,46 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPanel(props) {
-    const { handleClick } = props;
-  return (
-    <div className="ButtomPannelContainer">
-      <div className="rowOne">
-        <Button handleClick={handleClick} name="AC" />
-        <Button handleClick={handleClick} name="+/-" />
-        <Button handleClick={handleClick} name="%" />
-        <Button handleClick={handleClick} name="÷" />
-      </div>
-      <div className="rowTwo">
-        <Button handleClick={handleClick} name="7" />
-        <Button handleClick={handleClick} name="8" />
-        <Button handleClick={handleClick} name="9" />
-        <Button handleClick={handleClick} name="X" />
-      </div>
-      <div className="rowThree">
-        <Button handleClick={handleClick} name="4" />
-        <Button handleClick={handleClick} name="5" />
-        <Button handleClick={handleClick} name="6" />
-        <Button handleClick={handleClick} name="-" />
-      </div>
-      <div className="rowFour">
-        <Button handleClick={handleClick} name="1" />
-        <Button handleClick={handleClick} name="2" />
-        <Button handleClick={handleClick} name="3" />
-        <Button handleClick={handleClick} name="+" />
-      </div>
-      <div className="rowFive">
-        <Button handleClick={handleClick} name="0" />
-        <Button handleClick={handleClick} name="." />
-        <Button handleClick={handleClick} name="=" />
-      </div>
+const buttonGroup = [
+    { id: 1, name: 'AC' },
+    { id: 2, name: '+/-' },
+    { id: 3, name: '%' },
+    { id: 4, name: '÷' },
+    { id: 5, name: '7' },
+    { id: 6, name: '8' },
+    { id: 7, name: '9' },
+    { id: 8, name: 'x' },
+    { id: 9, name: '4' },
+    { id: 10, name: '5' },
+    { id: 11, name: '6' },
+    { id: 12, name: '-' },
+    { id: 13, name: '1' },
+    { id: 14, name: '2' },
+    { id: 15, name: '3' },
+    { id: 16, name: '+' },
+    { id: 17, name: '0' },
+    { id: 18, name: '.' },
+    { id: 19, name: '=' },
+  
+  ];
+
+const ButtonPanel = ({ clickHandler }) => (
+  <div className="panel">
+    <div className="group">
+      {buttonGroup.map(button => (button.name === '0'
+        ? <Button key={button.id} name={button.name} wide color="#dfdfdf" clickHandler={clickHandler} />
+        : (button.name === '+' || button.name === '-'
+          || button.name === '=' || button.name === 'x'
+          || button.name === '÷')
+          ? <Button key={button.id} name={button.name} clickHandler={clickHandler} />
+          : <Button key={button.id} name={button.name} color="#dfdfdf" clickHandler={clickHandler} />))}
     </div>
-  );
-}
+  </div>
+);
+
 ButtonPanel.propTypes = {
-    handleClick: PropTypes.func.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
+
+export default ButtonPanel;
