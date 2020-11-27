@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import './App.css';
 import Display from './Display';
@@ -16,7 +17,6 @@ class App extends Component {
   }
 
   handleClick(buttonName) {
-    // eslint-disable-next-line react/no-access-state-in-setstate
     this.setState(calculate(this.state, buttonName));
   }
 
