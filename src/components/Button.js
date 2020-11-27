@@ -3,9 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  const { name } = props;
+  const {
+    name, handleClick,
+  } = props;
   return (
-    <button type="button">
+    <button type="button" onClick={() => handleClick(name)}>
       { name }
     </button>
   );
@@ -13,6 +15,11 @@ function Button(props) {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
+Button.defaultProps = {
+  color: 'orange',
+  wide: false,
+};
 export default Button;
